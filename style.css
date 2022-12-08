@@ -155,13 +155,19 @@ header ul li:last-child {
 }
 
 .fv-img img:nth-of-type(1) {
-    height: 200px;
+    height: 150px;
 }
 
 .fv-img img:nth-of-type(2) {
     height: 200px;
 }
+.fv-img img:nth-of-type(3) {
+    height: 250px;
+}
 
+.fv-img img:nth-of-type(4) {
+    height: 300px;
+}
 /* common *********************************************/
 .container {
     max-width: 1000px;
@@ -391,7 +397,15 @@ header ul li:last-child {
     height: 30px;
 }
 
-.cotact-link {
+#contact{
+    background-image: url(img/service1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:rgba(0,0,0,0.7);
+    background-blend-mode:color;
+}
+.contact-link {
     width: 400px;
     margin: 0 auto;
     background: #fff;
@@ -400,7 +414,7 @@ header ul li:last-child {
     border-radius: 50px;
 }
 
-.cotact-link a {
+.contact-link a {
     color: #333;
     font-weight: bold;
     font-size: 2.0rem;
@@ -475,4 +489,54 @@ footer nav li {
     text-align: center;
     font-size: 1.3rem;
     padding: 20px 0;
+}
+
+.fadein{
+opacity: 0;
+animation-name: fadein;
+animation-duration: 0.6s;
+
+animation-timing-function: ease-out;
+animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    0% {
+       opacity: 0;
+       transform: translateX(-80px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0px);
+    }
+}
+
+/* fv */
+.fv-fadein{
+    opacity: 0;
+    animation-name: fv-fadein;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes fv-fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.fv-fadein1{
+    animation-delay:0.4s;
+}
+.fv-fadein2{
+    animation-delay:0.6s;
+}
+.fv-fadein3{
+    animation-delay:0.8s;
+}
+.fv-fadein4{
+    animation-delay:1.0s;
 }

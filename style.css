@@ -93,14 +93,14 @@ header ul li:last-child {
 
 /* fv **********************************************/
 #fv {
-    height: calc( 100vh - 70px );
+    height: calc(100vh - 70px);
     position: relative;
     margin-top: 70px;
     background-color: #cccccc;
 }
 
 .fv {
-    height: calc( 100vh - 70px );
+    height: calc(100vh - 70px);
 }
 
 .mask-landscape {
@@ -109,15 +109,17 @@ header ul li:last-child {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 .mask-landscape p {
     font-size: 19.0rem;
     font-weight: bold;
 }
+
 /* 英語文 */
 .fv-text {
     position: absolute;
@@ -128,22 +130,41 @@ header ul li:last-child {
     z-index: 500;
 }
 
-.line-1{/*対象のテキスト*/
-    border-right: 2px solid rgba(255,255,255,.75);
+.line-1 {
+    /*対象のテキスト*/
+    border-right: 2px solid rgba(255, 255, 255, .75);
     white-space: nowrap;
     overflow: hidden;
 }
-.anim-typewriter{/*アニメーションセッティング*/
+
+.anim-typewriter {
+    /*アニメーションセッティング*/
     animation: typewriter 3.0s steps(41) 1s 1 normal both,
-    blinkTextCursor 500ms steps(41) infinite normal;
+        blinkTextCursor 500ms steps(41) infinite normal;
 }
-@keyframes typewriter{/*タイプライターライクなアニメーション*/
-    from{width: 0;}
-    to{width: 22em;}
+
+@keyframes typewriter {
+
+    /*タイプライターライクなアニメーション*/
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 22em;
+    }
 }
-@keyframes blinkTextCursor{/*点滅するカーソルのアニメーション*/
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
+
+@keyframes blinkTextCursor {
+
+    /*点滅するカーソルのアニメーション*/
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
 }
 
 /* 会社名 */
@@ -156,11 +177,13 @@ header ul li:last-child {
     width: 300px;
     padding: 20px 0;
 }
+
 .fv-office-inner {
     margin: 0 auto;
     width: 200px;
 
 }
+
 .fv-office-title {
     position: relative;
     font-size: 3rem;
@@ -214,9 +237,10 @@ header ul li:last-child {
 }
 
 /* section *********************************************/
-section{
+section {
     padding: 55px 0;
 }
+
 .section-title {
     margin: 50px 0;
     font-size: 3.3rem;
@@ -225,14 +249,14 @@ section{
 }
 
 .section-text {
-    width:fit-content;
+    width: fit-content;
     margin: 0 auto 60px;
 }
 
 .hr {
     position: absolute;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     width: 40%;
 }
 
@@ -245,10 +269,11 @@ section{
     left: 0px;
     border: 0;
 }
+
 .hr2 {
     position: absolute;
     background: #666666;
-    width: calc( 100% - 30% );
+    width: calc(100% - 30%);
     height: 4px;
     top: 10px;
     left: 30%;
@@ -258,6 +283,7 @@ section{
 /* サービス ******************************************/
 .service-list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .service-item-wrapper {
@@ -265,7 +291,8 @@ section{
     overflow: hidden;
     position: relative;
 }
-.mask{
+
+.mask {
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
@@ -273,33 +300,39 @@ section{
     top: 0;
     left: 0;
 }
-.service-item-img{
+
+.service-item-img {
     width: 100%;
     height: 310px;
 }
-.service-item-img img{
+
+.service-item-img img {
     object-fit: cover;
     object-position: center;
 }
-.service-item-wrapper:hover .service-item-img{
-    transform:scale(1.1,1.1);
-    transition:1s all;
+
+.service-item-wrapper:hover .service-item-img {
+    transform: scale(1.1, 1.1);
+    transition: 1s all;
 }
-.service-item-text{
+
+.service-item-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 50%;
     color: #fff;
 }
-.service-item-text p:nth-of-type(1){
+
+.service-item-text p:nth-of-type(1) {
     font-size: 5.0rem;
     text-align: center;
     margin-bottom: 20px;
 }
-.service-item-text p:nth-of-type(2){
-    font-size:2.0rem;
+
+.service-item-text p:nth-of-type(2) {
+    font-size: 2.0rem;
     text-align: center;
 }
 
@@ -313,11 +346,13 @@ section{
     /* background: #cccccc; */
 
 }
-.page-title{
-    font-size: 2.8em;
+
+.page-title {
+    font-size: 2.8rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
+
 .page-item {
     width: 50%;
     padding: 20px 30px;
@@ -331,11 +366,12 @@ section{
     margin: 0 auto;
     color: #333;
     display: flex;
-    box-shadow: 5px 5px 5px 0px rgba(255, 255, 255,0.6);
+    box-shadow: 5px 5px 5px 0px rgba(255, 255, 255, 0.6);
 }
-.page-item-inner:hover .page-item-img img{
-    transform:scale(1.1,1.1);
-    transition:1s all;
+
+.page-item-inner:hover .page-item-img img {
+    transform: scale(1.1, 1.1);
+    transition: 1s all;
 }
 
 .page-item-img {
@@ -352,6 +388,7 @@ section{
     padding: 20px;
     position: relative;
 }
+
 /*
 .page-item-text-hr {
     position: relative;
@@ -543,22 +580,107 @@ footer nav li {
     animation-delay: 1.0s;
 }
 
-#page-top{
+#page-top {
     position: fixed;
     bottom: 0;
     right: 0;
     width: 50px;
     height: 50px;
     z-index: 9998;
-text-align: center;
+    text-align: center;
     background: #006e9f;
     bottom: 50px;
     right: 50px;
 }
-#page-top a{
+
+#page-top a {
     display: block;
     color: #fff;
     line-height: 50px;
     text-decoration: none;
     /* transform: rotate(-90deg); */
+}
+
+
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+@media screen and (max-width:500px) {
+
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+    .mask-landscape p {
+        font-size: 5.0rem;
+        font-weight: bold;
+    }
+
+    .fv-text {
+        font-size: 1.6rem;
+        left: 30px;
+    }
+    .fv-office{
+        left: 0;
+    }
+    .service-item-wrapper {
+        width: 100%;
+    }
+
+    .service-item-text p:nth-of-type(1){
+        font-size: 4.0rem;
+        font-weight: bold;
+    }
+
+    .page-wrapper {
+        flex-direction: column;
+    }
+
+    .page-item {
+        width: 90%;
+        margin: 0 auto 50px;
+        padding: 0;
+    }
+
+
+    .contact-link {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+    .footer-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-left {
+        width: 100%;
+        border-right: 0;
+    }
+    #page-top {
+        width: 30px;
+        height: 30px;
+        right: 30px;
+    }
+
+    #page-top a {
+        line-height: 30px;
+    }
+
+
+
+
+
+
+
+
 }

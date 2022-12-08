@@ -2,6 +2,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -98,7 +99,7 @@ header ul li:last-child {
 #fv {
     height: 450px;
     position: relative;
-    margin-top: 80px;
+    margin-top: 70px;
     background-color: #cccccc;
 
 }
@@ -155,11 +156,18 @@ header ul li:last-child {
 /* 会社名 */
 .fv-office {
     position: absolute;
-    top: 74%;
-    left: 80px;
+    bottom: 0%;
+    left: 40px;
     color: #333;
+    background: #fff;
+    width: 300px;
+    padding: 20px 0;
 }
+.fv-office-inner {
+    margin: 0 auto;
+    width: 200px;
 
+}
 .fv-office-title {
     position: relative;
     font-size: 3rem;
@@ -174,14 +182,15 @@ header ul li:last-child {
     left: 0;
     width: 200px;
     height: 1px;
-    background: #333;
+    background: darkblue;
 }
 
 /* 画像 */
 .fv-img {
     position: absolute;
-    top: 20%;
+    bottom: 0;
     left: 600px;
+    font-size: 0;
 }
 
 .fv-img img {
@@ -190,60 +199,66 @@ header ul li:last-child {
 }
 
 .fv-img img:nth-of-type(1) {
-    height: 150px;
+    height: 100px;
 }
 
 .fv-img img:nth-of-type(2) {
-    height: 200px;
+    height: 125px;
 }
 
 .fv-img img:nth-of-type(3) {
-    height: 250px;
+    height: 150px;
 }
 
 .fv-img img:nth-of-type(4) {
-    height: 300px;
+    height: 175px;
 }
 
 /* common *********************************************/
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px 0;
 }
 
 /* section *********************************************/
+section{
+    padding: 55px 0;
+}
 .section-title {
     margin: 50px 0;
     font-size: 3.3rem;
+    text-align: center;
+    position: relative;
 }
 
 .section-text {
-    margin-bottom: 60px;
     width: 400px;
+    margin: 0 auto 60px;
 }
 
 .hr {
-    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 40%;
 }
 
 .hr1 {
     position: absolute;
     background: #fff;
-    width: 50%;
-    height: 4px;
-    top: 10px;
-    left: 125px;
-    border: 0;
-}
-
-.hr2 {
-    position: absolute;
-    background: #666666;
-    width: 125px;
+    width: 30%;
     height: 4px;
     top: 10px;
     left: 0px;
+    border: 0;
+}
+.hr2 {
+    position: absolute;
+    background: #666666;
+    width: calc( 100% - 30% );
+    height: 4px;
+    top: 10px;
+    left: 30%;
     border: 0;
 }
 
@@ -255,106 +270,40 @@ header ul li:last-child {
 .service-item-wrapper {
     width: 50%;
     overflow: hidden;
+    position: relative;
 }
-
-.service-item {
+.mask{
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.service-item-img{
     width: 100%;
     height: 450px;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.7);
-    background-blend-mode: color;
 }
-
-.service-item1 {
-    background-image: url(img/service1.jpg);
-}
-
-.service-item2 {
-    background-image: url(img/service2.jpg);
-
-}
-
-.service-item3 {
-    background-image: url(img/service3.jpg);
-
-}
-
-.service-item4 {
-    background-image: url(img/service1.jpg);
-
-}
-
-.service-item:hover {
-    background-color: rgba(0, 0, 0, 0.0);
-    transition: all 1.0s;
-    overflow: hidden;
-}
-
-/* 画像 */
-.service-item img {
+.service-item-img img{
     object-fit: cover;
+    object-position: center;
 }
-
-/* 上部線 */
-.service-item-hr1 {
-    position: absolute;
-    width: 70%;
-    height: 3px;
-    top: 90px;
-    left: 51%;
-    transform: translate(-50%, 0);
-    background-color: #fff;
-    border: 0;
+.service-item-wrapper:hover .service-item-img{
+    transform:scale(1.1,1.1);
+    transition:1s all;
 }
-
-/* 下部線 */
-.service-item-hr2 {
+.service-item-text{
     position: absolute;
-    width: 70%;
-    height: 3px;
-    bottom: 90px;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
-    background-color: #fff;
-    border: 0;
-}
-
-/* ダイアモンド */
-.triangle {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    transform: rotate(45deg);
-    background-color: #fff;
-    top: 72px;
-    left: 14%;
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.triangle p {
-    transform: rotate(-45deg);
-    color: #333;
-}
-
-/* サービステキスト */
-.service-item-text {
-    position: absolute;
-    top: 145px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 65%;
+    transform: translate(-50%,-50%);
+    width: 50%;
     color: #fff;
 }
-
-.service-item-text p:nth-of-type(1) {
-    margin-bottom: 30px;
+.service-item-text p:nth-of-type(1){
+    font-size: 2.2rem;
     text-align: center;
-    font-size: 2.6rem;
+    margin-bottom: 20px;
 }
 
 
@@ -367,38 +316,31 @@ header ul li:last-child {
     /* background: #cccccc; */
 
 }
-
-.page-item {
-    height: 300px;
-    width: 50%;
-    position: relative;
+.page-title{
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 .page-item {
-    height: 300px;
     width: 50%;
-    position: relative;
+    padding: 20px 30px;
 }
 
 .page-item-inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    vertical-align: middle;
     background: #fff;
-    height: 180px;
-    width: 85%;
+    height: 230px;
+    width: 100%;
     margin: 0 auto;
     color: #333;
     display: flex;
 }
 .page-item-inner:hover .page-item-img img{
-    width: 130%;
-    transition: all 1.0s;
+    transform:scale(1.1,1.1);
+    transition:1s all;
 }
 
 .page-item-img {
-    width: 40%;
+    width: 50%;
     overflow: hidden;
 }
 
@@ -407,10 +349,11 @@ header ul li:last-child {
 }
 
 .page-item-text {
-    width: 60%;
+    width: 50%;
     padding: 20px;
+    position: relative;
 }
-
+/*
 .page-item-text-hr {
     position: relative;
 }
@@ -433,16 +376,11 @@ header ul li:last-child {
     left: 36px;
     background-color: gold;
     border: 0;
-}
+} */
 
 .page-item-text p:nth-of-type(1) {
-    font-size: 2.5rem;
-}
-
-.page-item-text p:nth-of-type(2) {
-    font-size: 2.0rem;
+    font-size: 1.5rem;
     margin-top: 20px;
-    margin-left: 50px;
 }
 
 .page-item-text img {

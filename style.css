@@ -242,7 +242,7 @@ section {
 }
 
 .section-title {
-    margin: 50px 0;
+    margin: 50px 0 30px;
     font-size: 3.3rem;
     text-align: center;
     position: relative;
@@ -256,6 +256,7 @@ section {
 .hr {
     position: absolute;
     left: 50%;
+    top: 65px;
     transform: translate(-50%, 0);
     width: 40%;
 }
@@ -419,13 +420,12 @@ section {
     margin-top: 20px;
 }
 
-.page-item-text img {
+.page-item-text .fa-circle-chevron-right {
     position: absolute;
     content: "";
     bottom: 20px;
     right: 20px;
-    width: 30px;
-    height: 30px;
+    font-size: 3.0rem;
     z-index: 9999;
 }
 
@@ -714,6 +714,18 @@ footer nav li {
         display: block;
     }
 
+    section {
+        padding: 30px 0 10px;
+    }
+    .section-title{
+        font-size: 2.5rem;
+    }
+
+    .hr{
+        top: 50px;
+        width: 65%;
+    }
+
     .mask-landscape p {
         font-size: 5.0rem;
         font-weight: bold;
@@ -760,6 +772,9 @@ footer nav li {
         width: 100%;
         border-right: 0;
     }
+    .page-title{
+        font-size: 3.2rem;
+    }
     #page-top {
         width: 30px;
         height: 30px;
@@ -771,9 +786,46 @@ footer nav li {
     }
 
 
+    .page-info {
+        width: 100%;
+        padding: 20px;
+        margin-left: 0;
+    }
+    .page-web-item{
+        flex-direction: column;
+    }
+    .page-web-item-text,.page-web-item-img{
+        width: 100%;
+        padding: 20px;
+    }
+    .page-web-flow{
+        flex-direction: column;
+    }
+    .page-web-flow-item{
+        width: 100%;
+    }
+    .page-web-flow-item img{
+        width: 20%;
+    }
+    .page-web-price{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .page-web-price-message{
+        width: 95%;
+        margin: 10px auto;
+        line-height: 1.8;
+    }
+    .page-web-flow-message {
+        width: 88%;
+        margin: 50px auto 0;
+        padding: 20px;
+    }
 
-
-
+    .page-web-flow-message a{
+        width: 80%;
+        margin: 30px auto 10px;
+    }
 
 
 

@@ -643,20 +643,32 @@ footer nav li {
     padding: 20px;
     width: 50%;
 }
-
+.page-web-flow-inner{
+    background: #fff;
+    padding: 40px 0;
+    color: #333;
+    border: 5px solid gold;
+}
+.page-web-flow-title{
+    text-align: center;
+    font-size: 3.0rem;
+    margin-bottom: 30px;
+}
 .page-web-flow{
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
-
 .page-web-flow-item {
     text-align: center;
     width: 20%;
     padding: 0 10px;
 }
+.page-web-flow-item p{
+    font-size: 2.0rem;
+}
 .page-web-flow-item img{
-    width: 95%;
+    width: 60%;
     padding: 20px 20px 0;
 }
 .page-web-flow-message{
@@ -665,7 +677,7 @@ footer nav li {
     padding:  60px 100px 20px;
     background-color: #fff;
     color: #333;
-    border: 5px solid gold;
+
 }
 .page-web-flow-message a{
     display: block;
@@ -678,7 +690,9 @@ footer nav li {
     text-align: center;
     border-radius: 50px;
 }
-
+.page-web-flow-item-text{
+    padding: 5% 3% 0;
+}
 .page-web-price dl{
     display: flex;
     text-align: center;
@@ -694,13 +708,83 @@ footer nav li {
     line-height: 50px;
     border-bottom: 1px dotted #fff;
 }
-.page-web-price-message{
+.page-web-link{
     width: 70%;
-    margin-top: 10px;
+    margin:30px auto 20px;
+    border-radius: 50px;
+    background: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.page-web-link a{
+    font-size: 3.0rem;
 }
 .bg-white{
     background: #fff;
     color: #333;
+    width: 100%;
+    margin: 0 auto;
+}
+.page-web-subsuku-list{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.page-web-subsuku-title{
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.page-web-subsuku-item{
+    width: 33%;
+    margin:0 20px;
+}
+.page-web-subsuku-item-num{
+    color: #fff;
+    font-size: 4.0rem;
+    margin: 10px 0;
+    position: relative;
+    text-align: center;
+}
+.page-web-subsuku-item-num::before{
+    position: absolute;
+    width: 15%;
+    height: 2px;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    content: "";
+}
+.page-web-subsuku-item-num::after{
+    position: absolute;
+    width: 15%;
+    height: 2px;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    content: "";
+}
+.page-web-subsuku-item-text{
+    color: #333;
+    background: #fff;
+}
+
+.page-web-subsuku-item-text p:nth-of-type(1){
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: auto;
+}
+.page-web-subsuku-item-text p:nth-of-type(2){
+    text-align: start;
+    padding: 20px;
+}
+.page-web-subsuku-item img{
+    width: 50%;
+    margin: auto;
+    display: block;
 }
 
 .pc {
@@ -805,6 +889,9 @@ footer nav li {
         width: 100%;
         padding: 20px;
     }
+    .page-web-flow-inner{
+        margin: 0 10px;
+    }
     .page-web-flow{
         flex-direction: column;
     }
@@ -812,7 +899,7 @@ footer nav li {
         width: 100%;
     }
     .page-web-flow-item img{
-        width: 60%;
+        width: 50%;
     }
     .page-web-price{
         width: 95%;
@@ -823,23 +910,33 @@ footer nav li {
         margin: 10px auto;
         line-height: 1.8;
     }
-    .page-web-flow-message {
-        width: 88%;
-        margin: 50px auto 0;
-        padding: 20px;
-    }
 
-    .page-web-flow-message a{
-        width: 80%;
-        margin: 30px auto 10px;
+    .page-web-flow-item p{
+        font-size: 2.2rem;
     }
     .page-web-flow .fa-angle-down{
         font-size: 5rem;
         text-align: center;
         margin: 5px 0 30px;
     }
-    .page-web-flow-item p{
-        font-size: 3.0rem;
+
+    .page-web-subsuku-list{
+        flex-direction: column;
     }
+    .page-web-subsuku-item{
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    .page-web-link{
+        width: 90%;
+    }
+    .page-web-link a{
+        font-size: 2.0rem;
+        color: #333;
+    }
+
+
+
 
 }

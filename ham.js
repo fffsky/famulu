@@ -15,3 +15,9 @@ ham_modal.addEventListener('click', () => {
     ham_menu.classList.toggle('add-menu-sp');
     ham_modal.classList.toggle('add-modal-sp');
 });
+// メニューをクリックしたとき
+ham_menu.addEventListener('click', () => {
+    btn.classList.toggle('open_ham');
+    ham_menu.classList.toggle('add-menu-sp');
+    ham_modal.classList.toggle('add-modal-sp');
+});

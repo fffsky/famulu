@@ -90,7 +90,12 @@ header ul li {
 header ul li:last-child {
     margin-right: 0px;
 }
-
+.header-sp-name{
+    width: fit-content;
+    line-height: 70px;
+    font-size: 3.0rem;
+    margin-left: 25px;
+}
 /* fv **********************************************/
 #fv {
     height: calc(100vh - 70px);
@@ -314,13 +319,14 @@ header ul li:last-child {
 .container {
     max-width: 1150px;
     margin: 0 auto;
-}
-
-/* section *********************************************/
-section {
     padding: 55px 0;
 }
-
+.page-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+/* section *********************************************/
 .section-title {
     margin: 50px 0 30px;
     font-size: 3.3rem;
@@ -360,7 +366,24 @@ section {
     left: 30%;
     border: 0;
 }
-
+/* main */
+.main-message{
+    height: 600px;
+    background-color: #666666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-message-text{
+    width: 80%;
+    margin: 0 auto;
+    line-height: 2.0;
+}
+.main-message p:nth-of-type(1){
+    font-size: 3.0rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
 /* サービス ******************************************/
 .service-list {
     display: flex;
@@ -384,7 +407,7 @@ section {
 
 .service-item-img {
     width: 100%;
-    height: 310px;
+    height: 450px;
 }
 
 .service-item-img img {
@@ -696,9 +719,11 @@ footer nav li {
 /* page */
 
 .page-web-title{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 30px;
+    width: fit-content;
+    border-bottom: 1px solid;
+    margin: 0 auto 25px;
 }
 .page-fv img{
     height: 500px;
@@ -721,7 +746,7 @@ footer nav li {
 
 }
 .page-info p:nth-of-type(2){
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 
 
@@ -732,8 +757,18 @@ footer nav li {
     width: 50%;
 }
 .page-web-item-text{
-    padding: 20px;
+    padding: 20px 50px;
     width: 50%;
+    font-size: 2.0rem;
+}
+.page-web-item-text-detail{
+    padding-left: 30px;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+.page-web-item-text-detail .fa-check{
+    color: red;
+    margin-right: 15px;
 }
 .page-web-flow-inner{
     background: #fff;
@@ -748,6 +783,7 @@ footer nav li {
 }
 .page-web-flow{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
 }
@@ -784,15 +820,22 @@ footer nav li {
 }
 .page-web-flow-item-text{
     padding: 20px 0;
+    font-size: 1.3rem;
 }
+
+
 .page-web-price dl{
     display: flex;
     text-align: center;
-
 }
+.page-marke-price dt{
+    font-size: 2.3rem;
+}
+.page-marke-pick dt{
+    font-size: 1.8rem;
+}
+
 .page-web-price dt,dd{
-    width: 40%;
-}.page-web-price dt,dd{
     width: 60%;
 }
 .page-web-price dt,dd{
@@ -870,6 +913,10 @@ footer nav li {
     text-align: start;
     padding: 20px;
 }
+.page-web-subsuku-item-text span{
+    font-size: 1.3rem;
+}
+
 .page-web-subsuku-item img{
     width: 100%;
     margin: 0 auto 20px;
@@ -877,6 +924,21 @@ footer nav li {
     height: 170px;
     object-fit: cover;
 }
+
+.page-marke-chroll table{
+    width: 100%;
+    text-align: center;
+}
+.page-marke-chroll table th{
+    height: 50px;
+    width: 50px;
+}
+.page-marke-chroll table td{
+    height: 50px;
+    border-bottom: 1px dotted;
+}
+
+
 
 .pc {
     display: block;
@@ -897,7 +959,22 @@ footer nav li {
     }
 
     section {
-        padding: 30px 0 10px;
+        padding: 0;
+    }
+    .container{
+        padding:0;
+    }
+    .contact-wrapper{
+        padding: 20px 0 40px;
+    }
+    .main-message{
+        height: 450px;
+    }
+    .main-message p:nth-of-type(1){
+        font-size: 2.6rem;
+    }
+    .page-container{
+        padding: 40px 0;
     }
     .section-title{
         font-size: 2.5rem;
@@ -940,7 +1017,10 @@ footer nav li {
         margin: 0 auto 50px;
         padding: 0;
     }
-
+    .contact-text{
+        width: 80%;
+        margin: 0 auto 30px;
+    }
 
     .contact-link {
         width: 90%;
@@ -1032,8 +1112,24 @@ footer nav li {
         font-size: 2.0rem;
         color: #333;
     }
-
-
-
-
+    .page-marke-chroll{
+        overflow-x: scroll;
+    }
+    .page-marke-chroll table{
+        white-space: nowrap;
+        border-collapse: collapse;
+        min-width: 1000px;
+        border: 1px #666666 solid;
+    }
+    .page-marke-chroll th{
+    }
+    .page-marke-chroll table th{
+        height: 50px;
+        width: 50px;
+    }
+    .page-marke-chroll table td{
+        height: 50px;
+        text-align: center;
+        border-bottom: #fff dotted 1px;
+    }
 }

@@ -1113,7 +1113,13 @@ footer nav li {
         color: #333;
     }
     .page-marke-chroll{
-        overflow-x: scroll;
+        overflow: scroll;
+
+
+    }
+    .scroll{
+        text-align: end;
+        padding: 10px;
     }
     .page-marke-chroll table{
         white-space: nowrap;

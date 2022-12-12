@@ -78,16 +78,18 @@ header {
     line-height: 70px;
 }
 
-header ul {
+header .header-inner ul {
     display: flex;
     align-items: center;
 }
 
-header ul li {
+header .header-inner ul li {
     margin-right: 20px;
 }
-
-header ul li:last-child {
+header .header-inner ul li a{
+    color: #fff;
+}
+header .header-inner ul li:last-child {
     margin-right: 0px;
 }
 .header-sp-name{
@@ -95,6 +97,9 @@ header ul li:last-child {
     line-height: 70px;
     font-size: 3.0rem;
     margin-left: 25px;
+}
+h1 a{
+    color: #fff;
 }
 /* fv **********************************************/
 #fv {
@@ -335,8 +340,8 @@ header ul li:last-child {
 }
 
 .section-text {
-    width: fit-content;
     margin: 0 auto 60px;
+    height: 300px;
 }
 
 .hr {
@@ -368,7 +373,7 @@ header ul li:last-child {
 }
 /* main */
 .main-message{
-    height: 600px;
+    height: 475px;
     background-color: #666666;
     display: flex;
     justify-content: center;
@@ -542,18 +547,21 @@ header ul li:last-child {
     z-index: 9999;
 }
 
-#contact {
+.contact-text {
     background-image: url(img/service1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.7);
     background-blend-mode: color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-link {
     width: 400px;
-    margin: 0 auto;
+    margin: 30px auto;
     background: #fff;
     text-align: center;
     padding: 8px 0;
@@ -564,12 +572,6 @@ header ul li:last-child {
     color: #333;
     font-weight: bold;
     font-size: 2.0rem;
-
-}
-
-.contact-wrapper {
-    /* background: #bebbbb; */
-    padding: 1px 50px 50px;
 }
 
 
@@ -1138,4 +1140,167 @@ footer nav li {
         text-align: center;
         border-bottom: #fff dotted 1px;
     }
+    .page-web-subsuku-item-text{
+        height: 370px;
+    }
 }
+
+
+
+
+
+/* ハンバーガーメニュー */
+
+/* ボタンの全体*/
+.ham_btn * {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    font: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+}
+
+.ham_btn {
+    display: block;
+    padding: 0;
+    width: 40px;
+    height: 20px;
+    position: fixed;
+    text-align: center;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    top: 25px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* ボタンのライン */
+.ham_btn .ham_btn_bar {
+    display: block;
+    width: 40px;
+    height: 2px;
+    transition: all 0.2s;
+    transform-origin: 0% 0%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+    background: #fff;
+}
+
+/* open前のボタン */
+.ham_btn .ham_btn_bar1 {
+    top: 0;
+}
+
+.ham_btn .ham_btn_bar2 {
+    top: 50%;
+}
+
+.ham_btn .ham_btn_bar3 {
+    top: 100%;
+}
+
+/* open後のボタン */
+.ham_btn.open_ham .ham_btn_bar {
+    width: 35.36px;
+    left: 7.5px
+}
+
+.ham_btn.open_ham .ham_btn_bar1 {
+    transform: rotate(0.7853981633974483rad) translateY(-50%);
+    top: -5px
+}
+
+.ham_btn.open_ham .ham_btn_bar2 {
+    opacity: 0;
+}
+
+.ham_btn.open_ham .ham_btn_bar3 {
+    transform: rotate(-0.7853981633974483rad) translateY(-50%);
+    top: calc(100% - 0px)
+}
+
+
+.ham_btn .ham_btn_bar {
+    background-color: #fff;
+}
+
+/* ボタン文字open前 */
+.ham_btn_text {
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    text-align: center;
+    font-size: 10px;
+    color: #2274a5;
+}
+
+.ham_btn_close {
+    letter-spacing: 0.08em;
+    display: none;
+}
+
+/* ボタン文字open後 */
+.ham_btn.open_ham .ham_btn_menu {
+    display: none;
+}
+
+.ham_btn.open_ham .ham_btn_close {
+    display: block;
+}
+
+/* 開閉メニュー */
+.menu-sp {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    z-index: 50;
+    background-color: #333;
+    padding-top: 150px;
+    padding-left: 30px;
+    transition: left 0.5s;
+}
+.menu-sp li{
+    margin: 15px 0;
+}
+
+.menu-sp a{
+    color: #fff;
+}
+.add-menu-sp {
+    left: 0;
+}
+
+/* モーダル */
+.modal-sp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 30;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.5s;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.add-modal-sp {
+    visibility: visible;
+    opacity: 1;
+    z-index: -1;
+}
+

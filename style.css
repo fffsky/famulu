@@ -337,6 +337,7 @@ h1 a{
     font-size: 3.3rem;
     text-align: center;
     position: relative;
+    color: #deb887;
 }
 
 .section-text {
@@ -354,7 +355,7 @@ h1 a{
 
 .hr1 {
     position: absolute;
-    background: #fff;
+    background: #deb887;
     width: 30%;
     height: 4px;
     top: 10px;
@@ -364,7 +365,7 @@ h1 a{
 
 .hr2 {
     position: absolute;
-    background: #666666;
+    background: #fff;
     width: calc(100% - 30%);
     height: 4px;
     top: 10px;
@@ -724,7 +725,7 @@ footer nav li {
     font-size: 3.5rem;
     text-align: center;
     width: fit-content;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #deb887;
     margin: 0 auto 25px;
 }
 .page-fv img{
@@ -1020,13 +1021,13 @@ footer nav li {
         padding: 0;
     }
     .contact-text{
-        width: 80%;
         margin: 0 auto 30px;
+        padding: 0 10%;
     }
 
     .contact-link {
         width: 90%;
-        margin: 0 auto;
+        margin: 20px auto;
     }
 
 

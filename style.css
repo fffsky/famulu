@@ -414,7 +414,7 @@ h1 a{
 
 .service-item-wrapper:hover .service-item-img {
     transform: scale(1.1, 1.1);
-    transition: 1s all;
+    transition: 0.5s all;
 }
 
 .service-item-text {
@@ -741,7 +741,10 @@ footer nav li {
     font-size: 1.8rem;
 }
 
-
+.page-web-title{
+    font-size: 3.0rem;
+    margin: 30px auto 25px;
+}
 .page-web-item{
     display: flex;
 }
@@ -864,27 +867,28 @@ footer nav li {
 }
 .page-web-subsuku-item-num{
     color: #fff;
-    font-size: 4.0rem;
-    margin: 10px 0;
+    font-size: 3.0rem;
+    margin: 10px auto;
     position: relative;
     text-align: center;
+    width: fit-content;
 }
 .page-web-subsuku-item-num::before{
     position: absolute;
-    width: 15%;
-    height: 2px;
+    width: 40%;
+    height: 1px;
     top: 50%;
-    left: 30%;
+    left: -19px;
     transform: translate(-50%,-50%);
     background: #fff;
     content: "";
 }
 .page-web-subsuku-item-num::after{
     position: absolute;
-    width: 15%;
-    height: 2px;
+    width: 40%;
+    height: 1px;
     top: 50%;
-    left: 70%;
+    right: -35px;
     transform: translate(-50%,-50%);
     background: #fff;
     content: "";
@@ -1061,13 +1065,18 @@ footer nav li {
         margin: 0 10px;
     }
     .page-web-flow{
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     .page-web-flow-item{
-        width: 100%;
+        width: 33%;
     }
     .page-web-flow-item img{
-        width: 50%;
+        width: 87%;
+    }
+    .fa-angles-right{
+        top: 66%;
+        left: 98%;
+        font-size: 1rem;
     }
     .page-web-price{
         width: 95%;
@@ -1084,7 +1093,7 @@ footer nav li {
     }
 
     .page-web-flow-item p{
-        font-size: 2.2rem;
+        font-size: 1.4rem;
     }
     .page-web-flow .fa-angle-down{
         font-size: 5rem;
@@ -1109,6 +1118,9 @@ footer nav li {
     }
     .page-marke-chroll{
         overflow: scroll;
+        width: 100%;
+        padding: 0 0 0 2.5%;
+}
 
 
     }
@@ -1136,6 +1148,8 @@ footer nav li {
     .page-web-subsuku-item-text{
         height: 370px;
     }
+
+
 }
 
 
